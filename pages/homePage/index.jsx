@@ -28,8 +28,8 @@ export const HomePage = () => {
     { name: "СОЦІАЛЬНІ МЕРЕЖІ", backgroundColor: "#B4FF96", height: 40, width: 280,}
   ];
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.text}>Волонтерити може кожен</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Волонтерити може кожен</Text>
       <Image style={styles.logo} source={require("../../assets/company-logo.png")} />
       <FlatList
         data={data}
@@ -42,15 +42,16 @@ export const HomePage = () => {
           />
         )}
       />
-    </SafeAreaView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  text: {
+  title: {
     color: "#000",
     fontSize: 20,
     fontWeight: 700,
+    paddingTop: 60
   },
   item: {
     height: 40,
@@ -59,6 +60,8 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
     alignItems: 'center',
+    paddingLeft: 20,
+    paddingRight: 20
   },
   logo: {
     marginTop: 15
